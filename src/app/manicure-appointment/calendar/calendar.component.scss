@@ -1,0 +1,94 @@
+.calendar-container {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+
+  .for-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+
+    .date-block-calendar {
+      background: #c1ffff;
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 10px;
+      position: relative;
+      height: 70px;
+      cursor: pointer;
+      margin-left: 5px;
+
+      &.busy {
+        color: black;
+        background: #7e7e7e;
+      }
+
+      .day {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      h3 {
+        font-weight: bold;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+
+    .date-block-calendar:first-of-type {
+      margin: 0 !important;
+    }
+  }
+
+
+  .swipe {
+    width: 5%;
+    background: #cccccc;
+    opacity: 0.5;
+    border: none;
+  }
+}
+
+.chose-time {
+  margin-top: 120px;
+  text-align: center;
+
+  .time-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-weight: bold;
+      font-size: 25px;
+    }
+
+    .time-btn {
+      height: 40px;
+      width: 80px;
+      margin-left: 20px;
+      background: #ffaeff;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      opacity: 0.5;
+      color: #000000;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
+
+#template-text {
+  margin-top: 150px;
+  opacity: 0.5 !important;
+  text-align: center;
+}
+
+

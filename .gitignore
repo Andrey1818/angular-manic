@@ -43,3 +43,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+src/environments
+src/manifest.webmanifest
+ngsw-config.json
+.firebaserc
+.firebase
+firebase.json

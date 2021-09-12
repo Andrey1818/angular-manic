@@ -1,0 +1,45 @@
+<div class="appointment-container">
+  <div class="content">
+    <div class="image">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/angular-manicure.appspot.com/o/photo_2021-08-10_22-53-10.jpg?alt=media&token=8a48f52e-6d6c-45c4-b9a0-5c0e68bf0fab"
+        alt="Не удалось загрузить фото">
+    </div>
+    <div class="appointment">
+      <h1 class="blocks-title">Запись</h1>
+      <mat-stepper orientation="vertical">
+        <mat-step>
+          <ng-template matStepLabel>Выбор услуги</ng-template>
+          <ng-template matStepContent>
+            <button mat-button matStepperNext>Next</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Выбрать время</ng-template>
+          <ng-template matStepContent>
+            <div class="appointment-components-inside">
+              <h1 class="blocks-title">Назначьте дату</h1>
+              <app-calendar [(ngModel)]="time"></app-calendar>
+            </div>
+            <button mat-button matStepperPrevious>Назад</button>
+            <button mat-button matStepperNext>Далее</button>
+          </ng-template>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Ваши данные</ng-template>
+          <div class="appointment-components-inside">
+            <h1 class="blocks-title">Данные о вас</h1>
+            <app-form [(ngModel)]="person"></app-form>
+          </div>
+            <button mat-button matStepperPrevious>Back</button>
+        </mat-step>
+      </mat-stepper>
+      <button
+        class="btn-sub"
+        type="submit"
+        (click)="setData()"
+        [disabled]="disableButton||!time||!person"
+      >Submit</button>
+    </div>
+  </div>
+</div>

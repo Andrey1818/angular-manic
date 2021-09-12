@@ -1,0 +1,43 @@
+
+<div *ngIf="!load" class="loading">
+  <app-loader></app-loader>
+</div>
+<div
+  class="main-information-all_blocks-container "
+>
+  <div class="main-information-all_blocks-content">
+    <div class="main-information-self-image">
+      <img id="ed-photo"
+           src="https://firebasestorage.googleapis.com/v0/b/angular-manicure.appspot.com/o/photoeditorsdk-export%20(1)%20(1).png?alt=media&token=e39715ab-cdbb-448a-aaed-b222025e2ea0"
+           alt="Не удалось загрузть фото" (load)="loaded()">
+    </div>
+
+    <div class="blocks-between">
+      <div class="line-in-center">
+        <div class="round">
+        </div>
+        <div class="round round-left" id="round-left">
+        </div>
+      </div>
+    </div>
+
+    <div class="blocks-between" id="bottom">
+      <div class="line-in-center">
+        <div class="round">
+        </div>
+        <div class="round round-left">
+        </div>
+      </div>
+    </div>
+
+    <div class="main-information-self-text-container">
+      <div class="main-information-self-text-around">
+        <div class="main-information-self-text">
+          <p><span style="color: #54f5f5">П</span>риветсвую вас . Я - Куропата Анита Игоревна, мастер ногтевого
+            сервиса
+            с опытом более года.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

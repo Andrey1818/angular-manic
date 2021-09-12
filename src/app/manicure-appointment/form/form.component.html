@@ -1,0 +1,11 @@
+<form
+  [formGroup]="form"
+  (input)="setState(
+      form.get('name')?.value,
+       form.get('surname')?.value,
+        form.get('phoneNumber')?.value
+        )">
+  <input type="text" class="person" placeholder="Ваше имя..." formControlName="name">
+  <input type="text" class="person" placeholder="Ваша фамилия..." formControlName="surname">
+  <input type="text" class="person" prefix="+38" mask="(000) 000 00 00" formControlName="phoneNumber"/>
+</form>

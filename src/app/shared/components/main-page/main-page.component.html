@@ -1,0 +1,43 @@
+<header>
+  <div class="block-button-menu">
+    <button mat-button [matMenuTriggerFor]="menu"><i class="material-icons">menu</i><span id="menu">Меню</span></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item class="menu" [routerLink]="['/main']"><span class="btn-text">Главная</span></button>
+      <button mat-menu-item class="menu" [routerLink]="['/price']"><span class="btn-text">Прайс лист</span></button>
+      <button mat-menu-item class="menu" [routerLink]="['/manicure-appointment']"><span
+        class="btn-text">Записаться</span></button>
+      <button mat-menu-item class="menu"><span class="btn-text">Контакты</span></button>
+      <button mat-menu-item class="menu" [routerLink]="['/actions']"><span class="btn-text">Акции</span></button>
+      <script src="https://kit.fontawesome.com/57d0350f57.js" crossorigin="anonymous"></script>
+    </mat-menu>
+  </div>
+  <div class="title">
+    <h1>Beauty Hands ZP <span class="material-icons">volunteer_activism</span></h1>
+  </div>
+  <div class="call">
+    <i class="material-icons icon-call">call</i>
+    <span>(+38)050-000-00-00</span>
+  </div>
+  <div class="social-block">
+    <a href="https://www.instagram.com/_anita_kuropata_/" target="_blank">
+      <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+           viewBox="0 0 16 16">
+        <path [attr.d]=icons.instagram></path>
+      </svg>
+    </a>
+    <a href="https://www.instagram.com/_anita_kuropata_/" target="_blank">
+      <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+           viewBox="0 0 16 16">
+        <path [attr.d]=icons.facebook></path>
+      </svg>
+    </a>
+    <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+         viewBox="0 0 16 16">
+      <path [attr.d]=icons.telegram></path>
+    </svg>
+  </div>
+</header>
+
+<div class="route">
+  <router-outlet></router-outlet>
+</div>

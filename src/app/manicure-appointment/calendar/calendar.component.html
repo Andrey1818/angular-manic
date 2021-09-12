@@ -1,0 +1,40 @@
+<div class="calendar-container">
+  <button (click)="changePart('change-')" class="swipe"><</button>
+  <div class="for-flex">
+    <div
+      *ngFor="let date of dates[part]|refactorPipe; index as index"
+      class="date-block-calendar"
+      (click)="setChoseDate(date); setVisibilityIndex(index, date)"
+      [ngClass]="{
+          busy: date.busy
+        }"
+      appDateBlock
+    >
+      <h1 class="day">{{date.date.getDate()}}</h1>
+      <h3 class="week-day">{{date.dayWeek}}</h3>
+      <h3 class="mounts">{{date.month}}</h3>
+    </div>
+  </div>
+  <button (click)="changePart('change+')" class="swipe">></button>
+</div>
+<div class="chose-time" *ngIf="visibilityIndex + 1 ; else text">
+  <h1>Выберете удобное для вас время</h1>
+  <div class="time-container">
+    <div
+      class="time"
+      *ngFor="let hour of dates[part][visibilityIndex]|returnTimes"
+    >
+      <button
+        class="time-btn"
+        (click)="setTime(choseDate, hour)"
+        appTimeBlock
+      >{{hour}}:00
+      </button>
+    </div>
+  </div>
+</div>
+<ng-template #text>
+  <h1 id="template-text">Тут появятся доступные часы для записи</h1>
+</ng-template>
+
+

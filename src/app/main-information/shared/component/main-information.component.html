@@ -1,0 +1,48 @@
+<div class="top-photo-container">
+  <img
+    id="work-photo"
+    src="https://firebasestorage.googleapis.com/v0/b/angular-manicure.appspot.com/o/merge_from_ofoct.jpg?alt=media&token=6a05b5c5-4a6e-4ac0-b8da-cfd125e6fff0"
+    alt="Не удалось загрусть фото"
+  >
+  <div class="backdrop-on-photo">
+    <div class="content-on-photo">
+      <div class="logo">
+          <img id="logo-photo"
+               src="https://firebasestorage.googleapis.com/v0/b/angular-manicure.appspot.com/o/icons8-%D0%BD%D0%BE%D0%B3%D1%82%D0%B8-100%20(2).png?alt=media&token=0ab2288d-0af2-44e9-9f6b-ee4efe0c938f"
+               alt="Не удалось загрузить фото">
+        <div class="logo-text">
+          <h1>Beauty Hands ZP</h1>
+          <h2>С заботой о вас и ваших руках
+            <span class="material-icons">favorite_border</span>
+          </h2>
+        </div>
+      </div>
+      <div class="container-hrefs">
+        <div class="container-hrefs-for-flex">
+          <h3 (click)="scrollToElement(mainInfSelf)">Обо мне</h3>
+          <h3 (click)="scrollToElement(mainInfSafeness)">О стерильности</h3>
+          <h3 (click) = "scrollToElement(mainGallery)">Галерея</h3>
+          <h3 (click)="scrollToElement(mainContacts)">Контакты</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-information-components-inside" #mainInfSelf>
+  <app-main-information-self></app-main-information-self>
+</div>
+
+<div class="main-information-components-inside" #mainInfSafeness>
+  <app-main-information-safeness></app-main-information-safeness>
+</div>
+
+<div class="main-information-components-inside" #mainGallery>
+  <app-main-gallery></app-main-gallery>
+</div>
+
+<div class="main-information-components-inside" #mainContacts>
+  <app-main-contacts></app-main-contacts>
+</div>
+
+
